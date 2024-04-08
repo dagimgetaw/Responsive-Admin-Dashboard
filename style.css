@@ -150,7 +150,8 @@ aside .sidebar a span {
 aside .sidebar a:last-child {
   position: relative;
   /* bottom: 2rem; */
-  top: 2rem;
+  /* top: 2rem; */
+  top: 18rem;
   width: 100%;
 }
 aside .sidebar a.active {
@@ -375,4 +376,61 @@ main .recent-orders a {
   grid-template-columns: 2.6rem auto;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+/* -------------------------------------- */
+.right .sales-analytics {
+  margin-top: 2rem;
+}
+.right .sales-analytics h2 {
+  margin-bottom: 0.8rem;
+}
+.right .sales-analytics .item {
+  background: var(--clr-white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.4rem var(--card-padding);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right .sales-analytics .item:hover {
+  box-shadow: none;
+}
+.right .sales-analytics .item .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;
+}
+.right .sales-analytics .item .icon {
+  display: flex;
+  padding: 0.6rem;
+  color: var(--clr-white);
+  border-radius: 50%;
+  background: var(--clr-primary);
+}
+.right .sales-analytics .item.offline .icon {
+  background: var(--clr-danger);
+}
+.right .sales-analytics .item.customers .icon {
+  background: var(--clr-success);
+}
+.right .sales-analytics .add-product {
+  background: transparent;
+  border: 2px dashed var(--clr-primary);
+  color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .sales-analytics .add-product div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.right .sales-analytics .add-product div h3 {
+  font-weight: 600;
 }
