@@ -21,6 +21,14 @@
   --padding-1: 1.2rem;
   --box-shadow: 0 2rem 3rem var(--clr-light);
 }
+.dark-theme-variables {
+  --clr-background: #181a1e;
+  --clr-white: #282528;
+  --clr-dark: #edeffd;
+  --clr-dark-variant: #a3bdcc;
+  --clr-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--clr-light);
+}
 * {
   margin: 0;
   padding: 0;
@@ -124,11 +132,9 @@ aside .top .close {
 aside .sidebar {
   display: flex;
   flex-direction: column;
-  /* height: 86vh; */
-  height: 100vh;
+  height: 86vh;
   position: relative;
-  /* top: 3rem; */
-  top: 2rem;
+  top: 3rem;
 }
 aside h3 {
   font-weight: 500;
@@ -146,13 +152,6 @@ aside .sidebar a {
 aside .sidebar a span {
   font-size: 1.6rem;
   transition: all 300ms ease;
-}
-aside .sidebar a:last-child {
-  position: relative;
-  /* bottom: 2rem; */
-  /* top: 2rem; */
-  top: 18rem;
-  width: 100%;
 }
 aside .sidebar a.active {
   background: var(--clr-light);
@@ -449,10 +448,6 @@ main .recent-orders a {
   aside .sidebar a {
     width: 5.6rem;
   }
-  aside .sidebar a:last-child {
-    position: relative;
-    margin-top: 1.8rem;
-  }
   main .insights {
     grid-template-columns: 1fr;
     gap: 0;
@@ -490,6 +485,13 @@ main .recent-orders a {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    left: -100%;
+    animation: showMenu 700ms ease forwards;
+  }
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
   }
   aside .logo {
     margin-left: 1rem;
@@ -498,17 +500,13 @@ main .recent-orders a {
     display: inline;
   }
   aside .sidebar h3 {
-    display: hidden;
+    display: inline;
   }
   aside .sidebar a {
     width: 100%;
     height: 3.4rem;
   }
-  aside .sidebar a:last-child {
-    position: absolute;
-    bottom: 5rem;
-  }
-  aside .close {
+  aside .top .close {
     display: inline-block;
     cursor: pointer;
   }
@@ -559,3 +557,4 @@ main .recent-orders a {
     left: 1rem;
   }
 }
+/* ----------------------------------------------- */
